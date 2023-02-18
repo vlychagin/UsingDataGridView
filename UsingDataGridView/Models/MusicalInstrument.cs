@@ -18,7 +18,7 @@ namespace UsingDataGridView.Models;
  *     • город хранения
  *     • страховая стоимость
  */
-internal class MusicalInstrument
+public class MusicalInstrument
 {
     // числовой идентификатор
     public int Id { get; set; }
@@ -26,7 +26,7 @@ internal class MusicalInstrument
     // название инструмента
     public string Name { get; set; } = null!;
 
-    // категория(духовой, струнный, ударный, и т.д.)
+    // категор ия(духовой, струнный, ударный, и т.д.)
     public string Category { get; set; } = null!;
 
     // мастер, создавший инструмент
@@ -42,7 +42,7 @@ internal class MusicalInstrument
     public int Insurance { get; set; }
 
     // фабричный метод создания объекта класса MusicalInstrument
-    public MusicalInstrument MusicalInstrumentFactory() {
+    public static MusicalInstrument MusicalInstrumentBuilder() {
         // получить индексы массивов-шаблонов
         int indexInstrument = Utils.GetRandom(0, Utils.Instruments.Length - 1);
         int indexArtisan = Utils.GetRandom(0, Utils.ArtisanNames.Length - 1);
@@ -54,9 +54,10 @@ internal class MusicalInstrument
             Category = Utils.Instruments[indexInstrument].Category,
             Artisan = Utils.ArtisanNames[indexArtisan],
             Year = Utils.GetRandom(1910, 1999),
-            City = Utils.Cities[indexCity]
+            City = Utils.Cities[indexCity],
+            Insurance = Utils.GetRandom(200, 3000) * 100
         };
-    } // MusicalInstrumentFactory
+    } // MusicalInstrumentBuilder
 
 } // class MusicalInstrument
 
