@@ -2,6 +2,8 @@ using UsingDataGridView.Views;
 
 namespace UsingDataGridView;
 
+// правки на другом компьтютере
+
 /*
  * Разработайте приложение Windows Forms с использованием изученных элементов
  * интерфейса. Используйте стартовое окно.
