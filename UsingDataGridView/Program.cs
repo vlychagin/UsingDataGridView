@@ -1,7 +1,6 @@
 using UsingDataGridView.Views;
 
 namespace UsingDataGridView;
-// изменени€ в проекте
 
 /*
  * –азработайте приложение Windows Forms с использованием изученных элементов
